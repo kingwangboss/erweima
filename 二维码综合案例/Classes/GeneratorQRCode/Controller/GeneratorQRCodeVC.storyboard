@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AWa-z1-PQ0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--生成二维码-->
+        <scene sceneID="1jp-3k-Z7N">
+            <objects>
+                <viewController title="生成二维码" id="AWa-z1-PQ0" customClass="GeneratorQRCodeVC" customModule="二维码综合案例" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F0L-KL-4cy"/>
+                        <viewControllerLayoutGuide type="bottom" id="KCr-iT-yan"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wiu-R4-YfB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q7E-t6-L7K">
+                                <rect key="frame" x="112" y="153" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="DIF-SA-y3n"/>
+                                    <constraint firstAttribute="width" constant="150" id="zWW-5e-ej7"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3uq-1K-Zs8">
+                                <rect key="frame" x="67" y="360" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.4388735701" blue="0.21729926599999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4QJ-XN-1PZ"/>
+                                    <constraint firstAttribute="height" constant="128" id="crs-nH-XEv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q7E-t6-L7K" firstAttribute="top" secondItem="F0L-KL-4cy" secondAttribute="bottom" constant="89" id="TcI-Lw-JWW"/>
+                            <constraint firstItem="3uq-1K-Zs8" firstAttribute="centerX" secondItem="q7E-t6-L7K" secondAttribute="centerX" id="V29-aY-y1T"/>
+                            <constraint firstItem="3uq-1K-Zs8" firstAttribute="top" secondItem="q7E-t6-L7K" secondAttribute="bottom" constant="57" id="ivK-Mo-gJw"/>
+                            <constraint firstItem="q7E-t6-L7K" firstAttribute="centerX" secondItem="wiu-R4-YfB" secondAttribute="centerX" id="zpl-zG-1ew"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="inputTV" destination="3uq-1K-Zs8" id="mNq-cr-7yZ"/>
+                        <outlet property="qrCodeImageView" destination="q7E-t6-L7K" id="cNg-Vb-b9N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rod-EH-K8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664.5" y="210.5"/>
+        </scene>
+    </scenes>
+</document>
